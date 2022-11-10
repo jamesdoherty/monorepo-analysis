@@ -24,16 +24,16 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Initialize CodeQL for ${{ project }}
+    - name: Initialize CodeQL for ${{ matrix.project }}
       uses: github/codeql-action/init@v2
       with:
         languages: javascript
-        config-file: .github/${{ project }}-config.yml
-                
+        config-file: .github/${{ matrix.project }}-config.yml
+
     - name: Autobuild
       uses: github/codeql-action/autobuild@v2
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
       with:
-        category: "${{ project }}"
+        category: "${{ matrix.project }}"              # this makes sure that analysis results are not overwritten by later analyses
