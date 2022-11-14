@@ -1,4 +1,4 @@
-name: "CodeQL"
+name: "CodeQL - project 3"
 
 on:
   push:
