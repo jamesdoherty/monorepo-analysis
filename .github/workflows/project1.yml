@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
     paths:
       - 'project1/**'
-      - '.github'
+      - '.github/**'
   pull_request:
     branches: [ "main" ]
     paths:
