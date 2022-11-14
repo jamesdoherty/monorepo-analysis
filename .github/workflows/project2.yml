@@ -3,10 +3,14 @@ name: "CodeQL - project 2"
 on:
   push:
     branches: [ "main" ]
-    paths: 'project2/**'
+    paths:
+      - 'project2/**'
+      - '.github'
   pull_request:
     branches: [ "main" ]
-    paths: 'project2/**'
+    paths:
+      - 'project2/**'
+      - '.github'
 
 jobs:
   analyze:
