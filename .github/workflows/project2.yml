@@ -3,8 +3,10 @@ name: "CodeQL"
 on:
   push:
     branches: [ "main" ]
+    paths: 'project2/**'
   pull_request:
     branches: [ "main" ]
+    paths: 'project2/**'
 
 jobs:
   analyze:
@@ -18,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        project: [ 'project1', 'project2', 'project3' ]
+        project: [ 'project2' ]
 
     steps:
     - name: Checkout repository
